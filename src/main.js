@@ -1,21 +1,22 @@
-import './style.css'
+import './style.css';
 
 console.log("Hello World!")
 let pokemon = "null"
 const txtinputid = document.getElementById("inputText");
 const txtpokemonname = document.getElementById("pokemonName")
+const button = document.getElementById("button");
+
 var audio = new Audio();
 
 function capitalizar(texto) {
     return texto.slice(0, 1).toUpperCase() + texto.slice(1, 50)
 }
-
 async function fetchData() {
     let fetching = true
     const txtinputvalue = document.getElementById("inputText").value.toLowerCase();
     const imgsprite = document.getElementById("pokemonsprite");
     if (fetching) {
-        imgsprite.src = "./imgs/loading.gif"
+        imgsprite.src = "../public/img/loading.gif"
         imgsprite.width = "50px";
         txtpokemonname.textContent = "Buscando..."
     }
@@ -46,4 +47,6 @@ async function fetchData() {
     catch (error) {
         console.error(error)
     }
+
 }
+button.addEventListener("click", fetchData);
