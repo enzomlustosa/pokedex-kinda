@@ -16,7 +16,7 @@ async function fetchData() {
     const txtinputvalue = document.getElementById("inputText").value.toLowerCase();
     const imgsprite = document.getElementById("pokemonsprite");
     if (fetching) {
-        imgsprite.src = "../public/img/loading.gif"
+        imgsprite.src = "/img/loading.gif"
         imgsprite.width = "50px";
         txtpokemonname.textContent = "Buscando..."
     }
