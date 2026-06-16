@@ -1,3 +1,5 @@
+import './style.css'
+
 console.log("Hello World!")
 let pokemon = "null"
 const txtinputid = document.getElementById("inputText");
